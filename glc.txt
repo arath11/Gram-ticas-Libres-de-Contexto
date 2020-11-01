@@ -1,10 +1,12 @@
-S,A,C
+S,A,B,C,D
 a,b
 S
-aS,A,C
+AB,Ɛ
 A
-a
+BS,C
 B
-aa
+SAB,a
 C
-aCb
+b
+D
+aDa

@@ -29,6 +29,7 @@ public class GLC {
     }
 
     public void imprimir(){
+        System.out.println();
         System.out.print(generador+"->");
         for(int i=0;i<generados.length;i++){
             System.out.print(generados[i]+"|");
@@ -42,6 +43,7 @@ public class GLC {
         prueba.añadir("b");
         prueba.añadir("SA");
         prueba.imprimir();
+
     }
 
 }
