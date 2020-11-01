@@ -1007,7 +1007,7 @@ public class Principal {
     public void pila(){
         System.out.println();
         System.out.println("-----Automata de pila-------");
-        System.out.println("De q0 a q1:\n Ɛ,⊥/ ⊥");
+        System.out.println("De q0 a q1:\n Ɛ,⊥/ S⊥");
         System.out.println("De q1 a q1:");
         for(int i=0;i<N1.length;i++){
             for(int j=0;j<N1[i].generados.length;j++){
@@ -1017,16 +1017,17 @@ public class Principal {
                 boolean yanoaplica=true;
                 boolean sacarPila=true;
                 String sacar="";
+                sacar=N1[i].generador;
                 for(int q=0;q<strings.length;q++){
                     if(esTerminal(strings[q]) && yanoaplica){
                         leer=leer+strings[q];
                     }else{
-                        if (sacarPila == true) {
-                            sacar=strings[q];
+
+                 //           sacar=strings[q]+"____"+N1[i].generador;
                             sacarPila=false;
-                        }else {
+                 //|
                             meterPila=meterPila+strings[q];
-                        }
+
                         yanoaplica=false;
 
                     }
@@ -1038,11 +1039,7 @@ public class Principal {
                 }else {
                     System.out.print(" "+leer+",");
                 }
-                if(sacar.equals("")){
-                    System.out.print("Ɛ/");
-                }else {
                     System.out.print(sacar+"/ ");
-                }
                 if(meterPila.equals("")){
                     System.out.print("Ɛ");
                 }else {
